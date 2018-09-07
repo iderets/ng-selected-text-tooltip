@@ -1,27 +1,20 @@
-# NgSelectedTextTooltipApp
+# ng-selected-text-tooltip
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Angular 6 Module for showing the tooltip (with possible action buttons) over the selected text area. Inspired by medium.com highlights feature.
 
-## Development server
+## Live Demo
+N/A yet
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Integration
+For now example of integration can be found in demo app in this repository. 
+Files to be checked:
+- src/app/app.module.ts
+- src/app/app.component.ts
+- src/app/app.component.html
+- src/app/app.component.less
 
-## Code scaffolding
+Better and more detailed documentation will be provided later on.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Special thanks
+ - Ben Nadel and his article https://www.bennadel.com/blog/3439-creating-a-medium-inspired-text-selection-directive-in-angular-5-2-10.htm 
+ - Todd Palmer and his serias of articles on how to create own library (https://blog.angularindepth.com/creating-a-library-in-angular-6-87799552e7e5)
