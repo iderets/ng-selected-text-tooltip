@@ -1,0 +1,22 @@
+.selection-tooltip {
+  position: absolute;
+  background: #333333;
+  color: white;
+  overflow: visible;
+  text-align: center;
+  white-space: nowrap;
+  transform: translate(-50%, -100% - 26px);
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 2;
+  &:after {
+    bottom: -11px ;
+    font-size: 15px ;
+    left: 50% ;
+    line-height: 15px ;
+    content: "▼" ;
+    color: #333333 ;
+    position: absolute ;
+    transform: translateX( -50% ) ;
+  }
+}

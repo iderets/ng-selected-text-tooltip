@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-selected-text-tooltip": [
+        "dist/ng-selected-text-tooltip"
+      ],
+      "ng-selected-text-tooltip/*": [
+        "dist/ng-selected-text-tooltip/*"
+      ]
+    }
   }
 }

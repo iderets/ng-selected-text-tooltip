@@ -1,20 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<h1>
+  Welcome to ng-selected-text-tooltip demo!
+</h1>
+<h2>This is some text before the active selection zone.</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu ultricies diam. Etiam imperdiet a orci vel accumsan. Aliquam erat volutpat. Aliquam arcu metus, pretium a est sit amet, finibus lobortis erat. Pellentesque id porta erat. Sed semper tristique enim sit amet bibendum. Integer ultricies quam nisl, quis sagittis nisl bibendum ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam quis elementum eros. Sed sed nisl vel enim molestie feugiat a sit amet nisi. Quisque interdum lacus sed risus tincidunt, sit amet rutrum enim euismod.</p>
+<h2>This is some text in active selection zone.</h2>
+<div [sttSelectedTextTooltip]="selectedTextTooltipTemplate" (sttSelectedText)="selectedText = $event">
+  <p>Proin suscipit tortor quis libero condimentum, vitae egestas risus maximus. In sodales sapien ut mauris lacinia, ac scelerisque erat tempor. Nullam quis elit sit amet est sagittis varius eget accumsan risus. Donec eleifend quam vel diam vestibulum sagittis. Praesent congue libero vitae mauris egestas pharetra. Praesent velit metus, mollis at arcu sed, vestibulum accumsan quam. Praesent eget dui elit. Morbi consequat quam a auctor elementum.</p>
+  <p>Mauris accumsan lectus bibendum, blandit mauris a, viverra felis. Vestibulum lorem magna, mollis eu ex vel, fringilla lacinia ipsum. Praesent volutpat consequat sapien, ullamcorper pulvinar justo laoreet vel. Vivamus eleifend eros vel ante sodales pretium. Mauris at metus varius, pellentesque metus vitae, ullamcorper arcu. Vivamus vel augue eu leo congue commodo. Nam eget convallis dui. Proin fringilla scelerisque leo vitae lobortis. Nullam at imperdiet lacus. Nullam urna dolor, sodales a arcu vitae, vulputate tristique lacus. Ut malesuada arcu orci, vel lacinia mauris finibus nec.</p>
+  <p>Etiam finibus commodo rhoncus. Nam suscipit eleifend iaculis. Quisque dictum laoreet risus, porta suscipit ligula bibendum ac. Donec condimentum nibh dapibus libero interdum, vitae consectetur est vulputate. Vivamus et odio dui. Sed tempus, sem at vehicula tempus, justo est consectetur quam, ut bibendum lacus dolor id enim. Vestibulum non pretium urna, semper euismod ex.</p>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h2>This is some text after the active selection zone.</h2>
+<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris sit amet consectetur sem. Aliquam ac pharetra urna. Phasellus massa nunc, sagittis sed quam vitae, ultricies ultricies nisi. Quisque porttitor eros sed bibendum pharetra. Donec lacinia tellus id vulputate maximus. Fusce odio dui, mattis non mi vitae, commodo interdum lorem. Cras vulputate felis sit amet metus rutrum, quis ultrices sem facilisis. Nulla lobortis, leo placerat maximus suscipit, sem augue blandit nisi, vel cursus nibh nibh at leo. In pretium ac nisi a faucibus.</p>
 
+<!-- Template with content for tooltip -->
+<ng-template #selectedTextTooltipTemplate>
+  <div class="selected-text-tooltip-bar" (mousedown)="$event.preventDefault()">
+    <i class="fa fa-fw fa-share-alt selected-text-tooltip-button" (click)="share()"></i>
+    <i class="fa fa-fw fa-bell selected-text-tooltip-button" (click)="showAlert()"></i>
+    <i class="fa fa-fw fa-clipboard selected-text-tooltip-button" (click)="copyToClipboard()"></i>
+  </div>
+</ng-template>

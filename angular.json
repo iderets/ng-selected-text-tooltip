@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -115,6 +116,46 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng-selected-text-tooltip": {
+      "root": "projects/ng-selected-text-tooltip",
+      "sourceRoot": "projects/ng-selected-text-tooltip/src",
+      "projectType": "library",
+      "prefix": "stt",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-selected-text-tooltip/tsconfig.lib.json",
+            "project": "projects/ng-selected-text-tooltip/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ng-selected-text-tooltip/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-selected-text-tooltip/src/test.ts",
+            "tsConfig": "projects/ng-selected-text-tooltip/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-selected-text-tooltip/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-selected-text-tooltip/tsconfig.lib.json",
+              "projects/ng-selected-text-tooltip/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
