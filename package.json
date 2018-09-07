@@ -1,13 +1,17 @@
 {
   "name": "ng-selected-text-tooltip-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-lib": "ng build --prod ng-selected-text-tooltip",
+    "npm-pack": "cd dist/ng-selected-text-tooltip && npm pack",
+    "copy-files": "cp ./README.md ./dist/ng-selected-text-tooltip && cp ./LICENSE ./dist/ng-selected-text-tooltip",
+    "package": "npm run build-lib && npm run copy-files && npm run npm-pack"
   },
   "private": true,
   "dependencies": {
