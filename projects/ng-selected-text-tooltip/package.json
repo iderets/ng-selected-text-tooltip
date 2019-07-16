@@ -1,6 +1,6 @@
 {
   "name": "ng-selected-text-tooltip",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tooltip for selected text with actions. Inspired by medium.com",
   "keywords": [
     "Angular",

@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-lib": "ng build --prod ng-selected-text-tooltip",
-    "npm-pack": "cd dist/ng-selected-text-tooltip && npm pack",
+    "npm-pack": "cd dist/ng-selected-text-tooltip && npm publish",
     "copy-files": "cp ./README.md ./dist/ng-selected-text-tooltip && cp ./LICENSE ./dist/ng-selected-text-tooltip",
     "package": "npm run build-lib && npm run copy-files && npm run npm-pack"
   },
