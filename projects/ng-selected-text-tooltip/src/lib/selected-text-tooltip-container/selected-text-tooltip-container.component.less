@@ -1,6 +1,6 @@
 .selection-tooltip {
   position: absolute;
-  background: #333333;
+  background-color: #333333;
   color: white;
   overflow: visible;
   text-align: center;
@@ -10,13 +10,15 @@
   border-radius: 3px;
   z-index: 2;
   &:after {
-    bottom: -11px ;
-    font-size: 15px ;
-    left: 50% ;
-    line-height: 15px ;
-    content: "▼" ;
-    color: #333333 ;
-    position: absolute ;
-    transform: translateX( -50% ) ;
+    background-color: inherit;
+    width: 10px;
+    height: 10px;
+    content: " ";
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+    border-radius: 2px;
+    z-index: -1;
   }
 }
