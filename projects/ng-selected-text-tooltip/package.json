@@ -2,13 +2,21 @@
   "name": "ng-selected-text-tooltip",
   "version": "1.0.2",
   "description": "Tooltip for selected text with actions. Inspired by medium.com",
-  "keywords" :["Angular","selected text","highlights","medium","tooltip","toolbar","action bar"],
-  "license" : "MIT",
+  "keywords": [
+    "Angular",
+    "selected text",
+    "highlights",
+    "medium",
+    "tooltip",
+    "toolbar",
+    "action bar"
+  ],
+  "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/iderets/ng-selected-text-tooltip"
+    "type": "git",
+    "url": "https://github.com/iderets/ng-selected-text-tooltip"
   },
-  "homepage" :"https://github.com/iderets/ng-selected-text-tooltip",
+  "homepage": "https://github.com/iderets/ng-selected-text-tooltip",
   "peerDependencies": {
     "@angular/common": "^6.0.0 || ^7.0.0 || ^8.0.0",
     "@angular/core": "^6.0.0 || ^7.0.0 || ^8.0.0"
